@@ -337,11 +337,12 @@ function renderCars(cars) {
                         <div class="flex gap-2">
                             <button onclick="toggleCompare(${car.id}, event)" 
                                 class="p-3 border border-zinc-200 dark:border-zinc-800 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-all active:scale-90"
-                                title="Comparar">
+                                title="Comparar" aria-label="Comparar ${car.title}">
                                 <svg class="w-4 h-4 text-zinc-600 dark:text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
                             </button>
                             <button onclick="openModalById(${car.id})" 
-                                class="bg-blue-600 text-white px-6 py-3 rounded-full text-[10px] font-extrabold hover:bg-blue-700 transition-all active:scale-95 tracking-widest uppercase">
+                                class="bg-blue-600 text-white px-6 py-3 rounded-full text-[10px] font-extrabold hover:bg-blue-700 transition-all active:scale-95 tracking-widest uppercase"
+                                aria-label="Ver mais detalhes sobre ${car.title}">
                                 VER MAIS
                             </button>
                         </div>

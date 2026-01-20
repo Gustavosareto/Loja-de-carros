@@ -2,8 +2,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AutoElite - Concessionária de carros premium e esportivos. Encontre BMW, Porsche, Audi e muito mais com o melhor preço e condições de financiamento.">
+    <meta name="keywords" content="carros de luxo, carros esportivos, BMW, Porsche, Audi, AutoElite, compra de carros, financiamento veicular">
+    <meta name="author" content="AutoElite">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://autoelite.com.br/">
+    <meta property="og:title" content="AutoElite | Experiência Premium BMW & Performance">
+    <meta property="og:description" content="A melhor seleção de veículos premium e esportivos com atendimento exclusivo.">
+    <meta property="og:image" content="https://autoelite.com.br/assents/outdor.webp">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://autoelite.com.br/">
+    <meta property="twitter:title" content="AutoElite | Experiência Premium BMW & Performance">
+    <meta property="twitter:description" content="A melhor seleção de veículos premium e esportivos com atendimento exclusivo.">
+    <meta property="twitter:image" content="https://autoelite.com.br/assents/outdor.webp">
+
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https://images.unsplash.com data:; video-src 'self' data:;">
     <title>AutoElite | Experiência Premium BMW & Performance</title>
+    
+    <!-- JSON-LD Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AutoDealer",
+      "name": "AutoElite Brasil",
+      "image": "https://autoelite.com.br/assents/outdor.webp",
+      "url": "https://autoelite.com.br",
+      "telephone": "+5511000000000",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Europa, 1500",
+        "addressLocality": "São Paulo",
+        "addressRegion": "SP",
+        "postalCode": "01449-001",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -23.57,
+        "longitude": -46.67
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "09:00",
+        "closes": "19:00"
+      },
+      "sameAs": [
+        "https://www.facebook.com/autoelite",
+        "https://www.instagram.com/autoelite"
+      ]
+    }
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
@@ -56,15 +117,15 @@
             </div>
         </div>
         <div class="flex items-center space-x-6">
-            <button id="themeToggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-zinc-800 transition-colors">
+            <button id="themeToggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-zinc-800 transition-colors" aria-label="Alternar entre modo claro e escuro">
                 <svg id="sunIcon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707M17.657 17.657l-.707-.707M6.343 6.343l-.707-.707M12 5a7 7 0 100 14 7 7 0 000-14z"/></svg>
                 <svg id="moonIcon" class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
             </button>
-            <button class="hidden md:block text-sm font-bold border-b-2 border-blue-600 pb-1 test-drive-btn">TEST DRIVE</button>
+            <button class="hidden md:block text-sm font-bold border-b-2 border-blue-600 pb-1 test-drive-btn" aria-label="Agendar Test Drive">TEST DRIVE</button>
             <a href="https://wa.me/55000000000" class="bg-[#1c69d4] text-white px-6 py-3 text-xs font-bold hover:bg-[#1652a5] transition-all uppercase tracking-widest rounded-full shadow-lg shadow-blue-600/20">Comprar Online</a>
             
             <!-- Mobile Menu Button -->
-            <button id="mobileMenuBtn" class="lg:hidden text-gray-900 focus:outline-none">
+            <button id="mobileMenuBtn" class="lg:hidden text-gray-900 focus:outline-none" aria-label="Abrir menu mobile">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
             </button>
         </div>
@@ -245,7 +306,7 @@
                 </div>
             </div>
             <div class="relative reveal">
-                <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1000&q=80" class="w-full h-[500px] object-cover grayscale hover:grayscale-0 transition duration-700">
+                <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1000&q=80" alt="Serviços Exclusivos AutoElite" class="w-full h-[500px] object-cover grayscale hover:grayscale-0 transition duration-700">
                 <div class="stats-badge hidden lg:block">
                     <p class="text-4xl font-black">15+</p>
                     <p class="text-[10px] font-bold tracking-widest uppercase">Anos de Excelência</p>
@@ -414,7 +475,7 @@
     <!-- Premium Club Section -->
     <section class="py-24 px-6 bg-gradient-to-r from-blue-900 to-black text-white overflow-hidden relative">
         <div class="absolute inset-0 opacity-20">
-            <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1920&q=80" class="w-full h-full object-cover">
+            <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1920&q=80" alt="Experiência Exclusiva Private Club" class="w-full h-full object-cover">
         </div>
         <div class="max-w-7xl mx-auto relative z-10 text-center">
             <span class="text-blue-400 font-bold tracking-[0.5em] text-xs uppercase mb-6 block">EXPERIÊNCIA EXCLUSIVA</span>
@@ -480,7 +541,7 @@
             </button>
             <div class="flex flex-col lg:flex-row">
                 <div class="lg:w-3/5 bg-gray-100 dark:bg-zinc-900 relative group overflow-hidden">
-                    <img id="modalImg" src="" class="w-full h-full object-cover min-h-[500px] transition-all duration-700">
+                    <img id="modalImg" src="" alt="Imagem do Veículo" class="w-full h-full object-cover min-h-[500px] transition-all duration-700">
                     
                     <!-- Slider Arrows -->
                     <button onclick="prevImage()" class="absolute left-6 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white text-black p-4 rounded-full transition-all opacity-0 group-hover:opacity-100 backdrop-blur-xl flex items-center justify-center shadow-2xl">
